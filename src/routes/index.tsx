@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$ } from "@qwik.dev/core";
+import type { DocumentHead } from "@qwik.dev/router";
 
 import styles from "./index.module.css";
 
@@ -13,7 +13,7 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
+export const head: DocumentHead = () => ({
   title: "Kafo",
   meta: [
     {
@@ -21,4 +21,4 @@ export const head: DocumentHead = {
       content: "Kafo Website",
     },
   ],
-};
+});

@@ -1,10 +1,11 @@
-import { component$, isDev } from "@builder.io/qwik";
-import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
+import { component$, isDev, useStyles$ } from "@qwik.dev/core";
+import { QwikRouterProvider, RouterOutlet } from "@qwik.dev/router";
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
 
 export default component$(() => {
+  useStyles$(`:root{view-transition-name:none}`);
   /**
    * The root of a QwikCity site always start with the <QwikCityProvider> component,
    * immediately followed by the document's <head> and <body>.
@@ -13,7 +14,7 @@ export default component$(() => {
    */
 
   return (
-    <QwikCityProvider>
+    <QwikRouterProvider viewTransition={true}>
       <head>
         <meta charset="utf-8" />
         {!isDev && (
@@ -27,6 +28,6 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
       </body>
-    </QwikCityProvider>
+    </QwikRouterProvider>
   );
 });
