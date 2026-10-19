@@ -1,0 +1,10 @@
+:root {
+  color-scheme: light dark;
+
+  --beige: #edf0da;
+  --vintage-grape: #5d536b;
+}
+
+body {
+  margin: 0;
+}

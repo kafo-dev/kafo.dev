@@ -1,25 +1,24 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
+import styles from "./index.module.css";
+
+import Lockup from "~/assets/lockup.svg?jsx";
+
 export default component$(() => {
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
-    </>
+    <main>
+      <Lockup class={styles.lockup} />
+    </main>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Kafo",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Kafo Website",
     },
   ],
 };

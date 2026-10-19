@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "Blank project with routing included",
+  "name": "kafo.dev",
+  "description": "Kafo Website",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
@@ -30,6 +30,7 @@
     "eslint": "9.32.0",
     "eslint-plugin-qwik": "^1.20.2",
     "globals": "16.4.0",
+    "node-gyp": "^13.1.0",
     "prettier": "3.6.2",
     "typescript": "5.4.5",
     "typescript-eslint": "8.38.0",
