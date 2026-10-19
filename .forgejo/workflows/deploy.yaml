@@ -1,0 +1,12 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: native
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build.server
+      - run: rsync -a --delete dist/ /var/lib/gitea-runner/site/deploy/
